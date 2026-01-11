@@ -96,7 +96,7 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="relative hidden lg:flex h-[600px] items-center justify-center"
+                        className="relative flex items-center justify-center lg:h-[600px] mt-8 lg:mt-0"
                     >
                         {/* Main Image Placeholder - Professional Headshot vibe */}
                         <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-slate-200">
