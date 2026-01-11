@@ -1,0 +1,120 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, TrendingUp, Users } from 'lucide-react';
+import pic1 from '../assets/pic1.jpg';
+import logoBridgewater from '../assets/logo-bridgewater.png';
+import logoNeonights from '../assets/logo-neonights.png';
+import logoZapmart from '../assets/logo-zapmart.webp';
+import logoGeneric from '../assets/logo-generic.png';
+
+const Hero = () => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    };
+
+    return (
+        <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+            {/* Background Gradient */}
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gold-400/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-deepBlue-900/5 blur-3xl rounded-full -translate-x-1/2 translate-y-1/2" />
+
+            <div className="container mx-auto px-6">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                    {/* Left Content */}
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="max-w-2xl"
+                    >
+                        <motion.h1
+                            variants={itemVariants}
+                            className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-deepBlue-900 mb-6"
+                        >
+                            Turn Your Digital Presence Into A <span className="text-transparent bg-clip-text bg-gradient-to-r from-deepBlue-800 to-gold-500">Revenue-Generating Machine</span>
+                        </motion.h1>
+
+                        <motion.p variants={itemVariants} className="text-lg text-slate-600 mb-8 leading-relaxed">
+                            Stop guessing, stop boosting random posts, stop wasting ad spend. Start running marketing that finally brings you qualified leads and sales in Dubai and across the UAE.
+                        </motion.p>
+
+                        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-10">
+                            <a
+                                href="https://wa.me/971543491544"
+                                className="inline-flex justify-center items-center px-8 py-4 bg-deepBlue-900 text-white font-semibold rounded-lg hover:bg-deepBlue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                            >
+                                Book Your Free Consultation
+                            </a>
+                            <a
+                                href="#case-studies"
+                                className="inline-flex justify-center items-center px-8 py-4 bg-transparent border-2 border-slate-200 text-slate-700 font-semibold rounded-lg hover:border-gold-500 hover:text-deepBlue-900 transition-all"
+                            >
+                                See How I Grow Brands
+                            </a>
+                        </motion.div>
+
+                        <motion.div variants={itemVariants} className="pt-8 border-t border-slate-200">
+                            <p className="text-sm font-medium text-black mb-3 flex items-center gap-2">
+                                <CheckCircle size={16} className="text-gold-500" />
+                                Trusted by 50+ businesses in Real Estate, Hospitality & E-commerce
+                            </p>
+                            <div className="overflow-hidden w-full relative">
+                                <motion.div
+                                    className="flex gap-16 items-center w-max"
+                                    animate={{ x: [0, -1000] }} // Moving left to simulate continuous scroll (standard marquee) 
+                                    transition={{
+                                        x: {
+                                            repeat: Infinity,
+                                            repeatType: "loop",
+                                            duration: 20,
+                                            ease: "linear",
+                                        },
+                                    }}
+                                >
+                                    {[...Array(2)].map((_, i) => (
+                                        <React.Fragment key={i}>
+                                            <img src={logoBridgewater} alt="Bridgewater" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+                                            <img src={logoNeonights} alt="Neonights" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+                                            <img src={logoZapmart} alt="Zapmart" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+                                            <img src={logoGeneric} alt="Trusted Partner" className="h-16 md:h-20 w-auto object-contain transition-all duration-300" />
+                                        </React.Fragment>
+                                    ))}
+                                </motion.div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Right Image & Floating Stats */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8 }}
+                        className="relative lg:h-[600px] flex items-center justify-center"
+                    >
+                        {/* Main Image Placeholder - Professional Headshot vibe */}
+                        <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-slate-200">
+                            <img
+                                src={pic1}
+                                alt="Ayisha Muneer"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-deepBlue-900/40 to-transparent" />
+                        </div>
+
+
+
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Hero;
