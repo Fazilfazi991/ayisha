@@ -60,7 +60,7 @@ const Hero = () => {
                             </a>
                         </motion.div>
 
-                        <motion.div variants={itemVariants} className="pt-6 sm:pt-8 border-t border-slate-200">
+                        <motion.div variants={itemVariants} className="hidden sm:block pt-6 sm:pt-8 border-t border-slate-200">
                             <p className="text-xs sm:text-sm font-medium text-black mb-3 flex items-center gap-2">
                                 <CheckCircle size={14} className="text-gold-500" />
                                 Trusted by 50+ businesses in Real Estate, Hospitality & E-commerce
