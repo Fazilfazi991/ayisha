@@ -19,7 +19,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative pt-24 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+        <section className="relative pt-20 pb-12 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
             {/* Background Gradient */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gold-400/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-deepBlue-900/5 blur-3xl rounded-full -translate-x-1/2 translate-y-1/2" />
@@ -32,29 +32,29 @@ const Hero = () => {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="max-w-2xl px-2 sm:px-0"
+                        className="max-w-2xl px-1 sm:px-0"
                     >
                         <motion.h1
                             variants={itemVariants}
-                            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-deepBlue-900 mb-4 lg:mb-6"
+                            className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-deepBlue-900 mb-3 lg:mb-6"
                         >
                             Turn Your Digital Presence Into A <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-deepBlue-800 to-gold-500">Revenue-Generating Machine</span>
                         </motion.h1>
 
-                        <motion.p variants={itemVariants} className="text-base sm:text-lg text-slate-600 mb-6 lg:mb-8 leading-relaxed">
-                            Stop guessing, stop boosting random posts, stop wasting ad spend. Start running marketing that finally brings you qualified leads and sales in Dubai and across the UAE.
+                        <motion.p variants={itemVariants} className="text-sm sm:text-lg text-slate-600 mb-5 lg:mb-8 leading-relaxed">
+                            Stop guessing, stop boosting random posts. Start running marketing that finally brings you qualified leads and sales in Dubai and across the UAE.
                         </motion.p>
 
-                        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 lg:mb-10">
+                        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 lg:mb-10">
                             <a
                                 href="https://wa.me/971543491544"
-                                className="inline-flex justify-center items-center px-6 py-3.5 sm:px-8 sm:py-4 bg-deepBlue-900 text-white font-semibold rounded-lg hover:bg-deepBlue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-sm sm:text-base"
+                                className="inline-flex justify-center items-center px-6 py-3 sm:px-8 sm:py-4 bg-deepBlue-900 text-white font-semibold rounded-lg hover:bg-deepBlue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-sm sm:text-base"
                             >
                                 Book Your Free Consultation
                             </a>
                             <a
                                 href="#case-studies"
-                                className="inline-flex justify-center items-center px-6 py-3.5 sm:px-8 sm:py-4 bg-transparent border-2 border-slate-200 text-slate-700 font-semibold rounded-lg hover:border-gold-500 hover:text-deepBlue-900 transition-all text-sm sm:text-base"
+                                className="inline-flex justify-center items-center px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-slate-200 text-slate-700 font-semibold rounded-lg hover:border-gold-500 hover:text-deepBlue-900 transition-all text-sm sm:text-base"
                             >
                                 See How I Grow Brands
                             </a>
